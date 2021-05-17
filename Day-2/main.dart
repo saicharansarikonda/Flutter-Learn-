@@ -22,13 +22,12 @@ class Home extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-        child: RaisedButton.icon(
+        child: IconButton(
           onPressed: () {},
           icon: Icon(
-            Icons.mail,
+            Icons.alternate_email,
+            color: Colors.amber,
           ),
-          label:Text("mail me"),
-          color: Colors.amber,
         ),
       ),
       floatingActionButton: FloatingActionButton(
