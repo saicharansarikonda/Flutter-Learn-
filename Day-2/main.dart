@@ -22,11 +22,17 @@ class Home extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-        child: Icon(
-          Icons.airport_shuttle,
-          color: Colors.blueGrey[200],
-          size: 50.0,
-        ),
+        child: RaisedButton(
+          onPressed: (){},
+          child: Text(
+            "click me",
+             style: TextStyle(
+               fontSize: 20.0,
+               fontStyle: FontStyle.normal,
+             ),
+            ),
+            color: Colors.brown,
+          ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
