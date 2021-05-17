@@ -22,17 +22,14 @@ class Home extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-        child: RaisedButton(
-          onPressed: (){},
-          child: Text(
-            "click me",
-             style: TextStyle(
-               fontSize: 20.0,
-               fontStyle: FontStyle.normal,
-             ),
-            ),
-            color: Colors.brown,
+        child: RaisedButton.icon(
+          onPressed: () {},
+          icon: Icon(
+            Icons.mail,
           ),
+          label:Text("mail me"),
+          color: Colors.amber,
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
