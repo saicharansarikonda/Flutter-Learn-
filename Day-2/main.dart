@@ -23,6 +23,8 @@ class Home extends StatelessWidget {
       ),
 
       body: Row(
+        mainAxisAlignment:  MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text("Hello!,How you doing"),
           FlatButton(
