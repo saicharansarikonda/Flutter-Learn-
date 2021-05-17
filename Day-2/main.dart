@@ -23,7 +23,8 @@ class Home extends StatelessWidget {
       ),
 
       body: Container(
-        padding: EdgeInsets.symmetric(horizontal:20.0,vertical:50.0),
+        padding: EdgeInsets.fromLTRB(10.0,20.0,30.0,40.0),
+        margin: EdgeInsets.all(20.0),
         color: Colors.lightBlue[400],
         child: Text("hey..how you doing"),
       ),
