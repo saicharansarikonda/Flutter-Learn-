@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'quote.dart';
+import 'quote_card.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -23,35 +24,6 @@ class _QuoteListState extends State<QuoteList> {
         text: "A room without books is like a body without a soul.")
   ];
 
-  Widget quoteTemplate(quote) {
-    return Card(
-      margin: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0.0),
-      child: Padding(
-        padding: const EdgeInsets.all(12.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Text(
-              quote.text,
-              style: TextStyle(
-                fontSize: 18.0,
-                color: Colors.grey[600],
-              ),
-            ),
-            SizedBox(height:6.0),
-            Text(
-              quote.author,
-              style: TextStyle(
-                fontSize: 14.0,
-                color: Colors.grey[800],
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,7 +35,14 @@ class _QuoteListState extends State<QuoteList> {
       ),
       body: Column(
         children: quotes.map((quote) {
-          return quoteTemplate(quote);
+          return QuoteCard(
+            quote: quote,
+            delete: () {
+              setState(() {
+                quotes.remove(quote);
+              });
+            },
+          );
         }).toList(),
       ),
     );
